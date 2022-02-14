@@ -26,6 +26,22 @@ describe("Function findNeedle", () => {
     expect(output).toEqual(expected);
 
   });
+
+  it("Giving a number, should throw an error", () => {
+    //Arrange
+    const number = 88;
+
+    //Act
+    const output = () => findNeedle(number, "number");
+
+    //Assert
+    expect(output).toThrow("Error");
+  });
+
+  it("Giving no parameters should throw an error", () => {
+    //Act and assert
+    expect(() => findNeedle()).toThrow("Error")
+  })
   
 });
 
