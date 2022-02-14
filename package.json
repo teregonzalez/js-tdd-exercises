@@ -12,7 +12,7 @@
     "node-fetch": "^2.1.2"
   },
   "devDependencies": {
-    "jest": "^22.4.3"
+    "jest": "^22.4.4"
   },
   "coverageThreshold": {
     "global": {
