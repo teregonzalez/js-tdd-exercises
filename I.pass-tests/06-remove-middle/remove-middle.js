@@ -10,7 +10,7 @@ const removeMiddle = (words) =>{
             arrayNoMiddle.push(element)
         }})
 
-    return (middleNum)
+    return middleNum;
 }
 
 module.exports = {
