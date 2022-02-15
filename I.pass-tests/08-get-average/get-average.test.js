@@ -12,6 +12,15 @@ describe ("Average function", () => {
     //Assert
     expect(output).toEqual(expected);
 
-
   });
+  it('Giving ["-", "hello", "hey"] should throw an error', () => {
+    //Arrange
+    const numbers = ["-", "hello", "hey"];
+    
+    //Act
+    const output = () => average(numbers);
+
+    //Assert
+    expect(output).toThrow("Error");
+  })
 });
