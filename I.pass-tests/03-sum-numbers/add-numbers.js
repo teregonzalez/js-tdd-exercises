@@ -4,7 +4,7 @@ const addNumbers = (numbers) => {
             throw new Error("Error")
         }
     });
-    return numbers.reduce((a, b) =>{ return a + b; });
+    return numbers.reduce((a, b) =>{return a + b});
 }
 module.exports = {
     addNumbers

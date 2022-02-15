@@ -1,10 +1,18 @@
-var factorial = require("./factorial");
+var {factorial} = require("./factorial");
 
-describe("Factorial", function() {
-  test("Factorial", function() {
-    var in1 = 5;
-    var exp1 = 120;
+describe("Function factorial", () => {
+  it("Giving 5 should return 120", () => {
+    //Arrange
+    const in1 = 5;
+    const exp1 = 120;
 
+    //Act
+    const output = factorial(in1);
+
+    //Assert
+    expect(output).toBe(exp1);
+
+    /*
     var in2 = 9;
     var exp2 = 362880;
 
@@ -28,5 +36,6 @@ describe("Factorial", function() {
     expect(out3).toEqual(exp3);
     expect(out4).toEqual(exp4);
     expect(out5).toEqual(exp5);
+    */
   });
 });

@@ -1,9 +1,7 @@
 const getWordLengths = (someWords) => {
-    let numArray = []
-    someWords.forEach(
+    return someWords.map(
         element =>  
-        numArray.push(element.split('').length));
-    return numArray;
+        element.length);
 };
 
 module.exports = {
