@@ -13,7 +13,7 @@ describe ("Average function", () => {
     expect(output).toEqual(expected);
 
   });
-  it('Giving ["-", "hello", "hey"] should throw an error', () => {
+  it('Giving ["-", "hello", "hey"] with no number, should throw an error', () => {
     //Arrange
     const numbers = ["-", "hello", "hey"];
     

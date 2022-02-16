@@ -4,15 +4,11 @@ const removeMiddle = (words) =>{
     }
     const middle = (words.length-1)/2;
     const middleNum = words[middle];
-    const arrayNoMiddle = []
-    words.forEach(element => 
-        {if(element !== middleNum) {
-            arrayNoMiddle.push(element)
-        }})
+    words.splice(middle, 1);
 
-    return middleNum;
+    return [middleNum];
+    //return middleNum;
 }
-
 module.exports = {
     removeMiddle
 };
