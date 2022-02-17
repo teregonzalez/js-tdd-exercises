@@ -1,4 +1,4 @@
-var paintShop = require("./paint-cars");
+const {paintShop} = require("./paint-cars");
 
 test("Paint shop", function() {
   var cars = [

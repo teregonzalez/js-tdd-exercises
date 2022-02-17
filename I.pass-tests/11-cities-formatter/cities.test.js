@@ -1,5 +1,8 @@
 var formatCities = require("./cities");
 
+describe("Function formarCities", () => {
+  
+})
 test("Cities", function() {
   var capitals = [
     { city: "Paris", country: "France" },

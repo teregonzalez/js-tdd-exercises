@@ -40,7 +40,7 @@ describe("Function factorial", () => {
   it("Giving 0 should return 0", () => {
     //Arrange
     const in4 = 0;
-    const exp4 = 0;
+    const exp4 = 1;
 
     //Act
     const out4 = factorial(in4);

@@ -9,6 +9,9 @@
 // note: factorial of 0 is 1
 
 const factorial = (in1) => {
+    if(in1 === 0){
+        return 1
+    }
     for (let i = in1 - 1; i >= 1; i--) {
         in1 *= i;
       }
