@@ -1,10 +1,10 @@
 const sales = (cars) => {
     //se crea un array con los nombres de las marcas en cars
-    const makeAndPrice = cars.map(car => {
+    const carsMake = cars.map(car => {
         return car.make
     })
     //Se guardan valores únicos de las marcas de cars
-    const brands = [...new Set(makeAndPrice)].sort();
+    const brands = [...new Set(carsMake)].sort();
     //Se filtra por nombre de la marca y se guardan los totales de los precios
     const brandTotals = brands.map(brand => {
         return {
@@ -20,9 +20,6 @@ const sales = (cars) => {
     console.log(totals);
 
     return totals
-
-
-
 }
 
 module.exports = {

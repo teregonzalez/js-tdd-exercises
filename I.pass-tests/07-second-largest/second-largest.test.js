@@ -11,7 +11,6 @@ describe("Function secondLargest", () => {
     //Assert
     expect(output).toEqual(57);
   });
-
   it("Giving [2, 0, 'house'] should throw an error", () => {
     //Arrange
     const numbers = [2, 0, 'house'];
