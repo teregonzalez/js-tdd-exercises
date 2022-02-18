@@ -1,5 +1,4 @@
 const {addOne} = require("./add-one.js");
-
 describe("addOne Function", () => {
   it("Giving the array [31, 57, 12, 5], addOne should return [32, 58, 13, 6]", () => {
     //Arrange
@@ -24,7 +23,5 @@ describe("addOne Function", () => {
 
     //Assert
     expect(result).toThrow("Error")
-
   });
-  
 });
