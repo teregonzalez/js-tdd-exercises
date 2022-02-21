@@ -1,14 +1,41 @@
-var removeVowels = require("../02-remove-vowels/remove-vowels");
+//const { removeVowels } = require("../02-remove-vowels/remove-vowels");
 
-function removeVowelsForWords(words) {
-  var result = words.map(function(word) {
-    return removeVowels(word);
+const removeVow = (word) => {
+  const characters = word.split("");
+
+  const result = [];
+  const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+
+  characters.forEach(character => {
+    if (vowels.includes(character)) {
+      result.push("");
+    } else {
+      result.push(character);
+    }
   });
 
+  return result.join("");
+}
+
+function removeVowelsForWords(words) {
+  const result = words.map(word => {
+    return removeVow(word);
+  });
   return result;
 }
 
-module.exports = removeVowelsForWords;
+
+/*
+const removeVowelsForWords = (words) => {
+  const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+
+  words.map(word => {
+    });
+  };
+*/
+module.exports = {
+  removeVowelsForWords
+};
 
 /*
     input: ["Irina", "Etza", "Daniel"]
