@@ -1,6 +1,6 @@
 const {formatCities} = require("./cities");
 
-describe("Function formarCities", () => {
+describe("Function formatCities", () => {
   it("Giving capitals and transform, should return expected", () => {
     //Arrange
     const capitals = [
