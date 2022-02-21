@@ -1,9 +1,9 @@
-function removeVowels(word) {
-  var characters = word.split("");
+const removeVowels = (word) => {
+  const characters = word.split("");
 
-  var result = [];
+  const result = [];
 
-  characters.forEach(function(character) {
+  characters.forEach(character =>{
     if (
       character === "a" ||
       character === "o" ||
@@ -20,7 +20,9 @@ function removeVowels(word) {
   return result.join("");
 }
 
-module.exports = removeVowels;
+module.exports = {
+  removeVowels
+};
 
 /*
   Let's trace this piece of code - what is the value of result with this input
