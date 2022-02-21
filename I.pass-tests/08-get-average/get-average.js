@@ -10,9 +10,10 @@ const average = (numbers) => {
         }
     });
 
-    if(sum = []){
+    if(sum.length===0){
         throw new Error("Error")
     }
+
     let sumAll = sum.reduce((a, b) =>{return a + b});
     return sumAll / sum.length;
 

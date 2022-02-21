@@ -1,26 +1,27 @@
-var formatCities = require("./cities");
+const {formatCities} = require("./cities");
 
 describe("Function formarCities", () => {
-  
-})
-test("Cities", function() {
-  var capitals = [
-    { city: "Paris", country: "France" },
-    { city: "Madrid", country: "Spain" },
-    { city: "Rome", country: "Italy" }
-  ];
+  it("Giving capitals and transform, should return expected", () => {
+    //Arrange
+    const capitals = [
+      { city: "Paris", country: "France" },
+      { city: "Madrid", country: "Spain" },
+      { city: "Rome", country: "Italy" }
+    ];
 
-  function transform({ city, country }) {
-    return `${city} is the capital of ${country}`;
-  }
+    const transform = ({ city, country }) => {
+      return `${city} is the capital of ${country}`;
+    }
+    const expected = [
+      "Paris is the capital of France",
+      "Madrid is the capital of Spain",
+      "Rome is the capital of Italy"
+    ];
 
-  var expected = [
-    "Paris is the capital of France",
-    "Madrid is the capital of Spain",
-    "Rome is the capital of Italy"
-  ];
+    //Act
+    const result = formatCities(capitals, transform);
 
-  var result = formatCities(capitals, transform);
-
-  expect(result).toEqual(expected);
+    //Assert
+    expect(result).toEqual(expected);
+  });
 });

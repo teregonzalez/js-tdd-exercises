@@ -1,5 +1,7 @@
-const formatCities = (cities) => {
-    return cities.filter(element => element)
+const formatCities = (someObject, someFunction) => {
+    return someObject.map(element => {
+        return someFunction(element);
+    })
 };
 
 module.exports = {
