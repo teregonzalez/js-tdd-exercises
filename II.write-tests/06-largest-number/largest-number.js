@@ -1,6 +1,6 @@
 function getLargestNumber(array) {
-  var largestNumber;
-  for (var i = 0; i < array.length - 1; i++) {
+  let largestNumber;
+  for (let i = 0; i < array.length - 1; i++) {
     if (array[i] > array[i + 1]) {
       largestNumber = array[i];
     }
@@ -8,4 +8,6 @@ function getLargestNumber(array) {
   return largestNumber;
 }
 
-module.exports = getLargestNumber;
+module.exports = {
+  getLargestNumber
+};
