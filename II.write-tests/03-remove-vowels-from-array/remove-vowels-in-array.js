@@ -1,25 +1,8 @@
-//const { removeVowels } = require("../02-remove-vowels/remove-vowels");
-
-const removeVow = (word) => {
-  const characters = word.split("");
-
-  const result = [];
-  const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
-
-  characters.forEach(character => {
-    if (vowels.includes(character)) {
-      result.push("");
-    } else {
-      result.push(character);
-    }
-  });
-
-  return result.join("");
-}
+const { removeVowels } = require("../02-remove-vowels/remove-vowels");
 
 function removeVowelsForWords(words) {
   const result = words.map(word => {
-    return removeVow(word);
+    return removeVowels(word);
   });
   return result;
 }

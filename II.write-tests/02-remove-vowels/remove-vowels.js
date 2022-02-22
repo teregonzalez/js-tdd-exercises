@@ -4,11 +4,11 @@ const removeVowels = (word) => {
   const result = [];
   const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
 
-  characters.forEach(character =>{
+  characters.forEach(character => {
     if (vowels.includes(character)) {
-      result.push(character);
+      result.push("");
     } else {
-      result.push("_");
+      result.push(character);
     }
   });
 

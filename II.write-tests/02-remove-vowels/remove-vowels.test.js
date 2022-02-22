@@ -1,10 +1,10 @@
 const {removeVowels} = require('./remove-vowels');
 
 describe("Function removeVowels", () => {
-  it("Giving the word 'samuel' would return '_a_ue_'", () => {
+  it("Giving the word 'samuel' would return 'sml'", () => {
     //Arrange
     const word = 'samuel';
-    const expected = '_a_ue_';
+    const expected = 'sml';
 
     //Act
     const result = removeVowels(word);
@@ -13,10 +13,10 @@ describe("Function removeVowels", () => {
     expect(result).toEqual(expected);
   });
 
-  it("Giving the word 'SAmuel' would return '_A_ue_'", () => {
+  it("Giving the word 'SAmuel' would return 'sml'", () => {
     //Arrange
     const word = 'sAmuel';
-    const expected = '_A_ue_';
+    const expected = 'sml';
 
     //Act
     const result = removeVowels(word);

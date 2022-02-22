@@ -1,9 +1,8 @@
 const greetPeople = (people) => {
   const greeting = "Hello ";
-  const greetingArr = people.map(person => {
+  return people.map(person => {
     return greeting + person;
   });
-  return greetingArr
 }
 
 module.exports = {
