@@ -1,5 +1,8 @@
 const getEven = (numbers) => {
-  return numbers.filter(function(number) {
+  if(!Array.isArray(numbers)){
+    throw new Error("Error");
+  }
+  return numbers.filter(number => {
     return number % 2 === 0;
   });
 }

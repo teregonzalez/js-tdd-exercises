@@ -11,6 +11,16 @@ describe('Function greetPeople', () => {
 
     //Assert
     expect(result).toEqual(expected);
+  });
+  it("Function should throw an error if array is empty", () => {
+    //Arrange
+    const names = [];
+
+    //Act
+    const result = () => greetPeople(names);
+
+    //Assert
+    expect(result).toThrow("Error");
   })
-})
+});
 

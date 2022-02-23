@@ -1,4 +1,7 @@
 const greetPeople = (people) => {
+  if(people.length === 0){
+    throw new Error("Error")
+  }
   const greeting = "Hello ";
   return people.map(person => {
     return greeting + person;

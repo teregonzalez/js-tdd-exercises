@@ -11,6 +11,24 @@ describe("Function getEven", () => {
 
         //Assert
         expect(result).toEqual(expected);
+    });
+    it("Giving a string should throw an error", () => {
+        //Arrange
+        const input = "Hello";
+
+        //Act
+        const result = () => getEven(input);
+
+        //Assert
+        expect(result).toThrow("Error");
+    });
+    it("Giving no parameters should throw an error", () => {
+        //Act
+        const result = () => getEven();
+
+        //Assert
+        expect(result).toThrow("Error");
+
     })
 });
 // example
