@@ -4,7 +4,7 @@ const getRepos = (repoName) => {
   return fetcher(repoName)
   .then((response) => {
     return response.map((rep) => {
-      return rep.name;
+      return rep.id;
     });
   });
 };
