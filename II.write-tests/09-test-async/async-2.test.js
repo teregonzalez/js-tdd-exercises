@@ -17,5 +17,4 @@ describe("Function fetcher", () => {
 });
 })
 
-
 test("a more deterministic test", function() {});
