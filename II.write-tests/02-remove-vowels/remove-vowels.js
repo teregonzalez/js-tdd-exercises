@@ -1,6 +1,8 @@
 const removeVowels = (word) => {
+  if(typeof word !== "string"){
+    throw new Error("Error")
+  }
   const characters = word.split("");
-
   const result = [];
   const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
 
@@ -21,8 +23,6 @@ module.exports = {
 
 /*
   Let's trace this piece of code - what is the value of result with this input
-
   var result = removeVowels('samuel');
-
   what is the value of result?
 */

@@ -24,5 +24,15 @@ describe("Function removeVowels", () => {
     //Assert
     expect(result).toEqual(expected);
   });
+  it("Giving an array as a parameter should throw an error", () => {
+    //Arrange
+    const word = ["Hey", 4];
 
+    //Act
+    const result = () => removeVowels(word);
+
+    //Assert
+    expect(result).toThrow("Error")
+
+  })
 });

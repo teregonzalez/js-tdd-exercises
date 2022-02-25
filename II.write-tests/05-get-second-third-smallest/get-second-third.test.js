@@ -26,6 +26,16 @@ describe("Function getSecondThird", () => {
         expect(result).toEqual(output);
         expect(input).toEqual(original);
     });
+    it("Giving a number as a parameter should throw an error", () => {
+        //Arrange
+        const input = 7;
+
+        //Act
+        const result = () => getSecondThird(input);
+        
+        //Assert 
+        expect(result).toThrow("Error")
+    })
 });
 
 // example

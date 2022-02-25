@@ -1,5 +1,4 @@
 const {greetPeople} = require('./greet-people')
-
 describe('Function greetPeople', () => {
   it("print list of names prefixed with Hello", () => {
     //Arrange
@@ -21,6 +20,6 @@ describe('Function greetPeople', () => {
 
     //Assert
     expect(result).toThrow("Error");
-  })
+  });
 });
 

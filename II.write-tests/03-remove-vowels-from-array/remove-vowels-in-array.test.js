@@ -11,5 +11,16 @@ describe('Function removeVowels', () => {
   // Assert
   expect(result).toEqual(expected);
   });
+
+  it("Giving a number as a parameter should throw an error", () => {
+    //Arrange
+    const input = 55;
+
+    //Act
+    const result = () => removeVowelsForWords(input);
+
+    //Assert
+    expect(result).toThrow("Error");
+  })
 });
 

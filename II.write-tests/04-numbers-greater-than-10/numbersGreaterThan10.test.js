@@ -1,4 +1,3 @@
-
 const {largerThanTen} = require("./numbersGreaterThan10");
 
 describe("largerThanTen function", () => {
@@ -13,6 +12,16 @@ describe("largerThanTen function", () => {
         //Assert
         expect(result).toEqual(output)
     });
+    it("Giving a string should throw an error", () => {
+        //Arrange
+        const input = "Hello!";
+
+        //Act
+        const result = () => largerThanTen(input);
+
+        //Assert
+        expect(result).toThrow("Error")
+    })
 });
 
 // input: [4, 10, 32, 9, 21];

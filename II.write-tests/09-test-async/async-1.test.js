@@ -5,7 +5,7 @@ describe("Function getRepos", () => {
     // arrange
     const url = "https://api.github.com/users/kabaros/repos";
     // act
-    return getRepos(url).then(result => {
+    const result = getRepos(url).then(result => {
       // assert
       //expect(result).toContain("js-exercises");
       expect(result).toContain("dom-ajax-repo");

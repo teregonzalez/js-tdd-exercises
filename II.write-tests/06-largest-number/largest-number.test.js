@@ -26,10 +26,18 @@ describe("Function getLargestNumber", () => {
         expect(result).toEqual(expected);
         expect(input).toEqual(original);
     })
-})
+    it("Giving a string as a parameter should throw an error", () => {
+        //Arrange
+        const input = "Hey!";
 
+        //Act
+        const result = () => getLargestNumber(input);
+        
+        //Assert 
+        expect(result).toThrow("Error");
+    })
+})
 // example
 // input: [3, 21, 88, 4, 36];
 // expected: 88;
-
 // also test that the original array hasn't changed

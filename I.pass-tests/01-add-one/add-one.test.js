@@ -14,9 +14,20 @@ describe("addOne Function", () => {
     expect(myArray).toEqual(unchanged);
   });
 
-  it("Giving a 44 to the function should throw an error", () => {
+  it("Giving a Hello to the function should throw an error", () => {
     //Arrang
-    const numbers = 44;
+    const numbers = "Hello";
+
+    //Act
+    const result = () => addOne(numbers);
+
+    //Assert
+    expect(result).toThrow("Error")
+  });
+
+  it("Giving a [44, 'Hello'] to the function should throw an error", () => {
+    //Arrang
+    const numbers = [44, 'Hello'];
 
     //Act
     const result = () => addOne(numbers);

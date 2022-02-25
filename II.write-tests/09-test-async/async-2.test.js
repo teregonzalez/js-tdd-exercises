@@ -2,7 +2,6 @@
 const { getRepos } = require("./async-2");
 const { fetcher } = require("./fetcher");
 //mock al modulo fetcher
-
 jest.mock("./fetcher");
 
 describe("Function fetcher", () => {
