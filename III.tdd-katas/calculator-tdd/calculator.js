@@ -14,7 +14,7 @@ const calculator = (numbers) => {
     if(numbers.length === 0){
         return 0;
     }
-    const numArray = numbers.split(',')
+    const numArray = numbers.split('')
     const numArrayNum = numArray.filter(number => {
         return !isNaN(number)
         })
