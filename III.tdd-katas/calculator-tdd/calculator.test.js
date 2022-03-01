@@ -43,24 +43,64 @@ describe("Function calculator", () => {
         //Assert
         expect(result).toEqual(13);
     });
-    it("Giving '1\n2,3' should return 6", () => {
+    it("Giving '12,3' should return 6", () => {
         //Arrange
-        const numbers = "1\n2,3";
+        const numbers = "12,3";
 
         //act
         const result = calculator(numbers)
 
         //Assert
-        expect(result).toEqual(6);
+        expect(result).toEqual(15);
     })
-    it('Giving "//;\n1;2" should return 3', () => {
+    it('Giving "1\n2,3" should return 3', () => {
         //Arrange
-        const numbers = "//;\n1;2";
+        const numbers = "1\n2,3";
 
         //Act
         const result = calculator(numbers);
 
         //Assert
-        expect(result).toEqual(3);
+        expect(result).toEqual(6);
+    })
+    it('Giving "88,10" should return 98', () => {
+        //Arrange
+        const numbers = "88,10";
+
+        //Act
+        const result = calculator(numbers);
+
+        //Assert
+        expect(result).toEqual(98);
+    })
+    it('Giving "88,rutyeiruter10" should return 98', () => {
+        //Arrange
+        const numbers = "88,rutyeiruter10";
+
+        //Act
+        const result = calculator(numbers);
+
+        //Assert
+        expect(result).toEqual(98);
+    })
+    it('Giving "-88,rutyeiruter10" should throw an error', () => {
+        //Arrange
+        const numbers = "-88.5,rutyeiruter10";
+
+        //Act
+        const result = () => calculator(numbers);
+
+        //Assert
+        expect(result).toThrow("negatives not allowed: -88.5");
+    })
+    it('Giving "33,1001" should return 33', () => {
+        //Arrange
+        const numbers = "33,1001";
+
+        //Act
+        const result = calculator(numbers);
+
+        //Assert
+        expect(result).toEqual(33);
     })
 });
