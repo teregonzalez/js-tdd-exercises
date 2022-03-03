@@ -1,14 +1,16 @@
 const fizzbuzz = (number) => {
+    if(number.length === 0){
+        throw new Error("Error, debes ingresar un número");
+    }
     const numbersArray = Array.from(Array(number).keys())
     const numbers = numbersArray.map(number => number+1)
-    console.log(numbers)
     const numbersArr = numbers.map(number=> {
-        if(number%3===0){
+        if(number%3===0 && number%5===0){
+        return "FizzBuzz"
+        }if(number%3===0){
             return "Fizz"
         }if(number%5===0){
             return "Buzz"
-        }if(number%3===0 && number%5===0){
-            return "FizzBuzz"
         }else{
             return number
         }
