@@ -13,6 +13,17 @@ describe("Function calculator", () => {
         expect(result).toEqual(0);
     });
 
+    it("Giving [89,10] should throw an error", () => {
+        //Arrange
+        const numbers = [89,10];
+
+        //Act
+        const result = () => calculator(numbers);
+
+        //Assert
+        expect(result).toThrow("Solo ingrese string")
+    });
+
     it("Giving 1 should return 1", () => {
         //Arrange
         const numbers = "1";
@@ -102,5 +113,15 @@ describe("Function calculator", () => {
 
         //Assert
         expect(result).toEqual(33);
+    });
+    it('Giving "33,1001,11" should return 44', () => {
+        //Arrange
+        const numbers = "33,1001,11";
+
+        //Act
+        const result = calculator(numbers);
+
+        //Assert
+        expect(result).toEqual(44);
     })
 });
