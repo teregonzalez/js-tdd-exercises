@@ -1,27 +1,16 @@
-const {calculator} = require("./calculator");
+const {calculator} = require('./calculator');
 
-describe("Function calculator", () => {
+describe('Function calculator', () => {
 
     it("Giving '' should return 0", () => {
         //Arrange
-        const numbers = "";
+        const numbers = '';
 
         //Act
         const result = calculator(numbers);
 
         //Assert
         expect(result).toEqual(0);
-    });
-
-    it("Giving [89,10] should throw an error", () => {
-        //Arrange
-        const numbers = [89,10];
-
-        //Act
-        const result = () => calculator(numbers);
-
-        //Assert
-        expect(result).toThrow("Solo ingrese string")
     });
 
     it("Giving 1 should return 1", () => {
@@ -44,6 +33,18 @@ describe("Function calculator", () => {
         //Assert
         expect(result).toEqual(2);
     });
+
+    it("Giving [89,10] should throw an error", () => {
+        //Arrange
+        const numbers = [89,10];
+
+        //Act
+        const result = () => calculator(numbers);
+
+        //Assert
+        expect(result).toThrow("It is not a string")
+    });
+
     it("Giving 3, 4 and 6 should return 13", () => {
         //Arrange
         const numbers = "3, 4, 6";
@@ -54,7 +55,7 @@ describe("Function calculator", () => {
         //Assert
         expect(result).toEqual(13);
     });
-    it("Giving '12,3' should return 6", () => {
+    it("Giving '12,3' should return 15", () => {
         //Arrange
         const numbers = "12,3";
 
@@ -64,7 +65,7 @@ describe("Function calculator", () => {
         //Assert
         expect(result).toEqual(15);
     })
-    it('Giving "1\n2,3" should return 3', () => {
+    it('Giving "1\n2,3" should return 6', () => {
         //Arrange
         const numbers = "1\n2,3";
 

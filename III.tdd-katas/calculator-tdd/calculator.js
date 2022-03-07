@@ -3,8 +3,8 @@ const addNum = (numbers) => {
 }
 
 const calculator = (numbers) => {
-    if(typeof numbers !== "string"){
-        throw new Error("Solo ingrese string");
+    if(typeof numbers !== 'string'){
+        throw new Error('It is not a string');
     }
     if(numbers.length === 0){
         return 0;
@@ -12,10 +12,10 @@ const calculator = (numbers) => {
     const onlyNum = numbers.match(/-?\d+(\.\d+)?/g)
     const numArrayFinal = onlyNum.map(number => {
         if(number<0){
-            throw new Error("negatives not allowed: "+number);
+            throw new Error('negatives not allowed: '+number);
         }
         if(number>1000){
-            return number = 0;
+            return 0;
         }else{
             return Number(number)
         }
