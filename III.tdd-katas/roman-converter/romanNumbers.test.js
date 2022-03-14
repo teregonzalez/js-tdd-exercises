@@ -97,6 +97,16 @@ describe('convertToOldRoman function', () => {
         //Assert
         expect(result).toBe('XII');
     });
+    it("Giving 15 should return XV", () => {
+        //Arrange
+        const number = 15;
+
+        //Act
+        const result = convertToOldRoman(number);
+
+        //Assert
+        expect(result).toBe('XV');
+    });
 
     it("Giving 18 should return XVIII", () => {
         //Arrange
@@ -118,5 +128,162 @@ describe('convertToOldRoman function', () => {
 
         //Assert
         expect(result).toBe('XXXII');
+    });
+    it('Giving 50 should return "L"', () => {
+        //Arrange
+        const number = 50;
+
+        //Act
+        const result = convertToOldRoman(number);
+
+        //Assert
+        expect(result).toBe('L');
+    })
+    it('Giving 64 should return "LXIIII"', () => {
+        //Arrange
+        const number = 64;
+
+        //Act
+        const result = convertToOldRoman(number);
+
+        //Assert
+        expect(result).toBe('LXIIII');
+    })
+
+    it('Giving 88 should return "LXXXVIII"', () => {
+        //Arrange
+        const number = 88;
+
+        //Act
+        const result = convertToOldRoman(number);
+
+        //Assert
+        expect(result).toBe('LXXXVIII');
+    })
+    it('Giving 100 should return "C"', () => {
+        //Arrange
+        const number = 100;
+
+        //Act
+        const result = convertToOldRoman(number);
+
+        //Assert
+        expect(result).toBe('C');
+    })
+    it('Giving 106 should return "C"', () => {
+        //Arrange
+        const number = 106;
+
+        //Act
+        const result = convertToOldRoman(number);
+
+        //Assert
+        expect(result).toBe('CVI');
+    })
+    it('Giving 116 should return "CXVI"', () => {
+        //Arrange
+        const number = 116;
+
+        //Act
+        const result = convertToOldRoman(number);
+
+        //Assert
+        expect(result).toBe('CXVI');
+    })
+
+    it('Giving 122 should return "CXXII"', () => {
+        //Arrange
+        const number = 122;
+
+        //Act
+        const result = convertToOldRoman(number);
+
+        //Assert
+        expect(result).toBe('CXXII');
+    })
+
+    it('Giving 125 should return "CXXV"', () => {
+        //Arrange
+        const number = 125;
+
+        //Act
+        const result = convertToOldRoman(number);
+
+        //Assert
+        expect(result).toBe('CXXV');
+    })
+    it('Giving 255 should return "CCLV"', () => {
+        //Arrange
+        const number = 155;
+
+        //Act
+        const result = convertToOldRoman(number);
+
+        //Assert
+        expect(result).toBe('CLV');
+    })
+    it('Giving 455 should return "CCLV"', () => {
+        //Arrange
+        const number = 455;
+
+        //Act
+        const result = convertToOldRoman(number);
+
+        //Assert
+        expect(result).toBe('CCCCLV');
+    })
+
+    it('Giving 503 should return "DIII"', () => {
+        //Arrange
+        const number = 503;
+
+        //Act
+        const result = convertToOldRoman(number);
+
+        //Assert
+        expect(result).toBe('DIII');
+    });
+
+    it('Giving 553 should return "DIII"', () => {
+        //Arrange
+        const number = 553;
+
+        //Act
+        const result = convertToOldRoman(number);
+
+        //Assert
+        expect(result).toBe('DLIII');
+    })
+
+    it('Giving 888 should return "DCCCLXXXVIII"', () => {
+        //Arrange
+        const number = 888;
+
+        //Act
+        const result = convertToOldRoman(number);
+
+        //Assert
+        expect(result).toBe('DCCCLXXXVIII');
+    })
+
+    it('Giving 2000 should return "MM"', () => {
+        //Arrange
+        const number = 2000;
+
+        //Act
+        const result = convertToOldRoman(number);
+
+        //Assert
+        expect(result).toBe('MM');
+    });
+    it('Giving 3000 should return "MMM"', () => {
+        //Arrange
+        const number = 3000;
+
+        //Act
+        const result = convertToOldRoman(number);
+
+        //Assert
+        expect(result).toBe('MMM');
     });
 });
