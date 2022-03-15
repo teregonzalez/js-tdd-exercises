@@ -70,10 +70,8 @@ const passwordVerifier = (password) => {
         if (contador >= 3) {
             return 'Ok';
     }
-
         // const verify = (password) => {
         // }
-        
     }
 
     module.exports = {
