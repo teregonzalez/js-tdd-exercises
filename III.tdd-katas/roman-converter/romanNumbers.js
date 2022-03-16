@@ -20,11 +20,10 @@ const moreThanTen = (number) => {
 
 
 const convertToOldRoman = (number) => {
-    if (number < 0 || number > 3000) {
-        throw new Error("Number should not be less than 0 and bigger than 3000");
+    if (number < 1 || number > 3000) {
+        throw new Error("Number should not be less than 1 and bigger than 3000");
     }
     let finalArray = []
-    const numTen = 'X';
     const numFifty = 'L';
     const numHundred = 'C';
     const numFHundred = 'D';
@@ -48,21 +47,16 @@ const convertToOldRoman = (number) => {
                     finalArray.push(numFifty);
                     const residFifty = num % 50;
                     if (residFifty > 10) {
-                        const decimFifty = residFifty / 10;
-                        const decimRom = numTen.repeat(decimFifty);
-                        finalArray.push(decimRom);
-                        const numResidFifty = residFifty % 10;
-                        const resultLessThanTen = lessThanTen(numResidFifty);
-                        finalArray.push(resultLessThanTen);
-                        return finalArray.join('');
+                        const resultMoreThanTen = moreThanTen(residFifty);
+                        const newFinalArray = finalArray.concat(resultMoreThanTen);
+                        return newFinalArray.join('');
                     } else {
                         const resultLessThanTen = lessThanTen(residFifty);
                         finalArray.push(resultLessThanTen);
                         return finalArray.join('');
                     }
                 }
-            } 
-            if (residFHundred >= 50 && residFHundred < 100) {
+            } if (residFHundred >= 50 && residFHundred < 100) {
                 const decim = residFHundred / 100;
                 const hundredRom = numHundred.repeat(decim);
                 finalArray.push(hundredRom);
@@ -71,13 +65,9 @@ const convertToOldRoman = (number) => {
                     finalArray.push(numFifty);
                     const residFifty = num % 50;
                     if (residFifty > 10) {
-                        const decimFifty = residFifty / 10;
-                        const decimRom = numTen.repeat(decimFifty);
-                        finalArray.push(decimRom);
-                        const numResidFifty = residFifty % 10;
-                        const resultLessThanTen = lessThanTen(numResidFifty);
-                        finalArray.push(resultLessThanTen);
-                        return finalArray.join('');
+                        const resultMoreThanTen = moreThanTen(residFifty);
+                        const newFinalArray = finalArray.concat(resultMoreThanTen);
+                        return newFinalArray.join('');
                     } else {
                         const resultLessThanTen = lessThanTen(residFifty);
                         finalArray.push(resultLessThanTen);
@@ -109,13 +99,9 @@ const convertToOldRoman = (number) => {
                 finalArray.push(numFifty);
                 const residFifty = num % 50;
                 if (residFifty > 10) {
-                    const decimFifty = residFifty / 10;
-                    const decimRom = numTen.repeat(decimFifty);
-                    finalArray.push(decimRom);
-                    const numResidFifty = residFifty % 10;
-                    const resultLessThanTen = lessThanTen(numResidFifty);
-                    finalArray.push(resultLessThanTen);
-                    return finalArray.join('');
+                    const resultMoreThanTen = moreThanTen(residFifty);
+                    const newFinalArray = finalArray.concat(resultMoreThanTen);
+                    return newFinalArray.join('');
                 } else {
                     const resultLessThanTen = lessThanTen(residFifty);
                     finalArray.push(resultLessThanTen);
@@ -132,13 +118,9 @@ const convertToOldRoman = (number) => {
                 finalArray.push(numFifty);
                 const residFifty = num % 50;
                 if (residFifty > 10) {
-                    const decimFifty = residFifty / 10;
-                    const decimRom = numTen.repeat(decimFifty);
-                    finalArray.push(decimRom);
-                    const numResidFifty = residFifty % 10;
-                    const resultLessThanTen = lessThanTen(numResidFifty);
-                    finalArray.push(resultLessThanTen);
-                    return finalArray.join('');
+                    const resultMoreThanTen = moreThanTen(residFifty);
+                    const newFinalArray = finalArray.concat(resultMoreThanTen);
+                    return newFinalArray.join('');
                 } else {
                     const resultLessThanTen = lessThanTen(residFifty);
                     finalArray.push(resultLessThanTen);
@@ -166,13 +148,9 @@ const convertToOldRoman = (number) => {
             finalArray.push(numFifty);
             const residFifty = num % 50;
             if (residFifty > 10) {
-                const decimFifty = residFifty / 10;
-                const decimRom = numTen.repeat(decimFifty);
-                finalArray.push(decimRom);
-                const numResidFifty = residFifty % 10;
-                const resultLessThanTen = lessThanTen(numResidFifty);
-                finalArray.push(resultLessThanTen);
-                return finalArray.join('');
+                const resultMoreThanTen = moreThanTen(residFifty);
+                const newFinalArray = finalArray.concat(resultMoreThanTen);
+                return newFinalArray.join('');
             } else {
                 const resultLessThanTen = lessThanTen(residFifty);
                 finalArray.push(resultLessThanTen);

@@ -23,6 +23,17 @@ describe('passwordVerifier function', () => {
         expect(result).toBe('Not ok');
     });
 
+    it('Giving a C1234567 password should return "Not ok"', () =>{
+        //Arrange
+        const password = "C1234567";
+
+        //Act
+        const result = passwordVerifier(password);
+
+        //Assert
+        expect(result).toBe('Not ok');
+    });
+
     it('Giving a Contrasena password should return "Ok"', () =>{
         //Arrange
         const password = "Contrasena";

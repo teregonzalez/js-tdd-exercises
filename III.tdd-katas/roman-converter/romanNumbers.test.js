@@ -1,6 +1,16 @@
 const { convertToOldRoman } = require('./romanNumbers');
 
 describe('convertToOldRoman function', () => {
+    it("Giving 0 should throw an error", () => {
+        //Arrange
+        const number = 0;
+
+        //Act
+        const result = () => convertToOldRoman(number);
+
+        //Assert
+        expect(result).toThrow('Number should not be less than 1 and bigger than 3000');
+    });
     it("Giving 3001 should throw an error", () => {
         //Arrange
         const number = 3001;
@@ -9,7 +19,7 @@ describe('convertToOldRoman function', () => {
         const result = () => convertToOldRoman(number);
 
         //Assert
-        expect(result).toThrow('Number should not be less than 0 and bigger than 3000');
+        expect(result).toThrow('Number should not be less than 1 and bigger than 3000');
     });
     it("Giving 1 should return I", () => {
         //Arrange
@@ -285,5 +295,26 @@ describe('convertToOldRoman function', () => {
 
         //Assert
         expect(result).toBe('MMM');
+    });
+
+    it('Giving 2500 should return "MMD"', () => {
+        //Arrange
+        const number = 2500;
+
+        //Act
+        const result = convertToOldRoman(number);
+
+        //Assert
+        expect(result).toBe('MMD');
+    });
+    it('Giving 2100 should return "MMC"', () => {
+        //Arrange
+        const number = 2100;
+
+        //Act
+        const result = convertToOldRoman(number);
+
+        //Assert
+        expect(result).toBe('MMC');
     });
 });
